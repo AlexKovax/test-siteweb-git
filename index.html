@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git pour Vibe Coders | Arrête de perdre tes projets IA !</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Space+Grotesk:wght@400;700;900&display=swap');
+        
+        * { font-family: 'Space Grotesk', sans-serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        
+        .brutal-shadow { box-shadow: 8px 8px 0px #000; }
+        .brutal-shadow-sm { box-shadow: 4px 4px 0px #000; }
+        .brutal-shadow-lg { box-shadow: 12px 12px 0px #000; }
+        .brutal-shadow-red { box-shadow: 8px 8px 0px #dc2626; }
+        .brutal-shadow-yellow { box-shadow: 8px 8px 0px #eab308; }
+        .brutal-shadow-green { box-shadow: 8px 8px 0px #16a34a; }
+        
+        .brutal-border { border: 4px solid #000; }
+        .brutal-border-thick { border: 6px solid #000; }
+        
+        .glitch {
+            position: relative;
+            animation: glitch 2s infinite;
+        }
+        
+        @keyframes glitch {
+            0%, 100% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+        }
+        
+        .shake:hover {
+            animation: shake 0.5s;
+        }
+        
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+        
+        .rotate-3d {
+            transform: rotateX(5deg) rotateY(-5deg);
+        }
+        
+        .bg-noise {
+            background-image: 
+                radial-gradient(circle at 1px 1px, rgba(255,255,255,.15) 1px, transparent 0);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="bg-white text-black">
+    <!-- Hero Section -->
+    <div class="bg-black text-white relative overflow-hidden">
+        <div class="bg-noise absolute inset-0 opacity-50"></div>
+        <div class="container mx-auto px-4 py-16 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="brutal-border bg-red-500 text-black p-4 mb-8 transform -rotate-1">
+                    <p class="mono font-bold">⚠️ ALERTE VIBE CODER ⚠️</p>
+                </div>
+                
+                <h1 class="text-6xl md:text-8xl font-black mb-8 leading-none glitch">
+                    TON IA CODE<br>
+                    <span class="text-yellow-400 mono">POUR TOI ?</span><br>
+                    <span class="text-red-500">QUI SAUVEGARDE ?</span>
+                </h1>
+                
+                <div class="brutal-border-thick bg-yellow-400 text-black p-8 mb-8 rotate-3d">
+                    <p class="text-xl md:text-2xl font-bold mono">
+                        TU FAIS DU VIBE CODING → TU NE REGARDES JAMAIS LE CODE<br>
+                        UN JOUR → BOOM 💥 → TON PROJET DISPARAÎT<br>
+                        TOI → 😭 DANS TON CAFÉ ☕
+                    </p>
+                </div>
+                
+                <div class="brutal-border bg-white text-black p-8 mb-8 transform rotate-1">
+                    <h2 class="text-2xl font-black mb-4 text-red-600">SCÉNARIO CATASTROPHE</h2>
+                    <div class="text-left space-y-2 mono text-sm">
+                        <p>> "Hey Claude, fais-moi une app géniale !"</p>
+                        <p>> Claude génère 50 fichiers parfaits</p>
+                        <p>> "Cool ! Change juste la couleur en bleu"</p>
+                        <p>> Claude écrase TOUT et casse la base</p>
+                        <p>> "NOOOOOON ! REVIENS EN ARRIÈRE !"</p>
+                        <p class="text-red-600 font-bold">> GAME OVER</p>
+                    </div>
+                </div>
+                
+                <button class="bg-yellow-400 text-black font-black text-xl px-8 py-4 brutal-border brutal-shadow transform -rotate-1 hover:rotate-0 transition-transform shake mono">
+                    ARRÊTER DE PLEURER → APPRENDRE GIT
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Problem Section -->
+    <div class="py-16 bg-white relative">
+        <div class="absolute top-0 left-0 w-full h-2 bg-black"></div>
+        <div class="absolute top-2 left-0 w-full h-2 bg-red-500"></div>
+        
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-5xl font-black text-center mb-12 transform -rotate-2">
+                    <span class="brutal-border bg-black text-white p-4 inline-block">
+                        POURQUOI LES VIBE CODERS
+                    </span><br>
+                    <span class="brutal-border bg-red-500 text-white p-4 inline-block mt-4">
+                        ONT BESOIN DE GIT
+                    </span>
+                </h2>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="brutal-border bg-red-500 text-white p-6 brutal-shadow-red transform rotate-1">
+                        <h3 class="font-black text-xl mb-3 mono">🔥 DÉSASTRE CTRL+Z</h3>
+                        <p class="font-bold">Ton IA transforme ton chef-d'œuvre en CATASTROPHE. Impossible de revenir en arrière.</p>
+                    </div>
+                    
+                    <div class="brutal-border bg-yellow-400 text-black p-6 brutal-shadow-yellow transform -rotate-2">
+                        <h3 class="font-black text-xl mb-3 mono">💻 CRASH ORDI</h3>
+                        <p class="font-bold">Laptop MORT. 6 mois de projets IA ÉVAPORÉS. Tu avais sauvegardé NULLE PART.</p>
+                    </div>
+                    
+                    <div class="brutal-border bg-green-500 text-white p-6 brutal-shadow-green transform rotate-2">
+                        <h3 class="font-black text-xl mb-3 mono">🤝 COLLAB IMPOSSIBLE</h3>
+                        <p class="font-bold">47 fichiers par EMAIL. Ton collègue te DÉTESTE.</p>
+                    </div>
+                    
+                    <div class="brutal-border bg-blue-500 text-white p-6 brutal-shadow transform -rotate-1">
+                        <h3 class="font-black text-xl mb-3 mono">📂 BORDEL VERSIONS</h3>
+                        <p class="font-bold">app-final.js → app-final-v2.js → app-VRAIMENT-final.js</p>
+                    </div>
+                    
+                    <div class="brutal-border bg-purple-500 text-white p-6 brutal-shadow transform rotate-1">
+                        <h3 class="font-black text-xl mb-3 mono">😤 IA QUI BUG</h3>
+                        <p class="font-bold">L'IA fait N'IMPORTE QUOI. Sans Git = GAME OVER</p>
+                    </div>
+                    
+                    <div class="brutal-border bg-pink-500 text-black p-6 brutal-shadow transform -rotate-2">
+                        <h3 class="font-black text-xl mb-3 mono">🎭 SYNDROME IMPOSTEUR</h3>
+                        <p class="font-bold">Tous les VRAIS devs utilisent Git. Même les vibe coders COOLS.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Solution Section -->
+    <div class="py-16 bg-black text-white relative">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="brutal-border-thick bg-yellow-400 text-black p-8 mb-12 transform rotate-1">
+                    <h2 class="text-4xl font-black mono leading-tight">
+                        GIT POUR VIBE CODERS<br>
+                        LA FORMATION QUI SAUVE DES VIES
+                    </h2>
+                </div>
+                
+                <div class="brutal-border bg-white text-black p-6 mb-12 transform -rotate-1">
+                    <p class="text-xl font-bold mono">
+                        APPRENDS GIT SANS JAMAIS REGARDER LE CODE<br>
+                        JUSTE LES COMMANDES MAGIQUES POUR SAUVER TES PROJETS IA
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="brutal-border bg-green-500 text-white p-8 transform rotate-2">
+                        <h3 class="text-2xl font-black mb-4 mono">✨ CE QUE TU VAS APPRENDRE</h3>
+                        <ul class="text-left space-y-2 font-bold">
+                            <li class="mono">→ Commande magique RETOUR EN ARRIÈRE</li>
+                            <li class="mono">→ Sauvegarde AUTO sur GitHub</li>
+                            <li class="mono">→ Partage comme un PRO</li>
+                            <li class="mono">→ Gestion depuis ton TÉLÉPHONE</li>
+                            <li class="mono">→ 5 commandes Git OBLIGATOIRES</li>
+                            <li class="mono">→ Connecter ton IA à Git</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="brutal-border bg-red-500 text-white p-8 transform -rotate-1">
+                        <h3 class="text-2xl font-black mb-4 mono">🎁 BONUS INCLUS</h3>
+                        <ul class="text-left space-y-2 font-bold">
+                            <li class="mono">→ Templates COPIER-COLLER</li>
+                            <li class="mono">→ Scripts pour AUTOMATISER TOUT</li>
+                            <li class="mono">→ Prompts IA OPTIMISÉS</li>
+                            <li class="mono">→ Guide "OUPS J'AI TOUT CASSÉ"</li>
+                            <li class="mono">→ Discord VIBE CODERS</li>
+                            <li class="mono">→ Mises à jour À VIE</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="brutal-border-thick bg-yellow-400 text-black p-8 mb-8 transform rotate-1">
+                    <h3 class="text-3xl font-black mb-4 mono">🏆 GARANTIE ZÉRO PRISE DE TÊTE</h3>
+                    <p class="text-xl font-bold">
+                        SI TU N'ARRIVES PAS À SAUVEGARDER EN 1 SEMAINE<br>
+                        ON TE REMBOURSE ET ON FAIT LE SETUP POUR TOI
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="py-16 bg-yellow-400 text-black">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-5xl font-black text-center mb-12">
+                    <span class="brutal-border bg-black text-white p-4 inline-block transform -rotate-2">
+                        ILS ONT ARRÊTÉ DE PERDRE
+                    </span><br>
+                    <span class="brutal-border bg-red-500 text-white p-4 inline-block mt-4 transform rotate-1">
+                        LEURS PROJETS 🎉
+                    </span>
+                </h2>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="brutal-border bg-white p-6 brutal-shadow transform rotate-1">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-black text-white brutal-border flex items-center justify-center font-black mono">M</div>
+                            <div class="ml-3">
+                                <h4 class="font-black">MARIE</h4>
+                                <p class="font-bold mono text-sm">CEO STARTUP</p>
+                            </div>
+                        </div>
+                        <p class="font-bold">"J'ai PERDU 3 projets avant cette formation. Maintenant je dors TRANQUILLE !"</p>
+                    </div>
+                    
+                    <div class="brutal-border bg-white p-6 brutal-shadow transform -rotate-2">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-black text-white brutal-border flex items-center justify-center font-black mono">T</div>
+                            <div class="ml-3">
+                                <h4 class="font-black">THOMAS</h4>
+                                <p class="font-bold mono text-sm">ALLERGIQUE CODE</p>
+                            </div>
+                        </div>
+                        <p class="font-bold">"MÊME MOI j'ai réussi ! En 2h TOUT était configuré. Claude sauvegarde AUTO."</p>
+                    </div>
+                    
+                    <div class="brutal-border bg-white p-6 brutal-shadow transform rotate-2">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-black text-white brutal-border flex items-center justify-center font-black mono">L</div>
+                            <div class="ml-3">
+                                <h4 class="font-black">LAURA</h4>
+                                <p class="font-bold mono text-sm">CONSULTANTE</p>
+                            </div>
+                        </div>
+                        <p class="font-bold">"FINI les 'final-final-v3.js' ! Mes clients pensent que je suis une VRAIE TECH 😎"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pricing Section -->
+    <div class="py-16 bg-red-500 text-white relative">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-5xl font-black mb-8 mono">
+                    UNE FORMATION<br>
+                    DES PROJETS SAUVÉS À VIE
+                </h2>
+                
+                <div class="brutal-border-thick bg-black text-white p-8 mb-8 transform -rotate-1">
+                    <div class="flex justify-center items-center mb-6">
+                        <span class="text-8xl font-black text-yellow-400 mono">97€</span>
+                        <div class="ml-6 text-left">
+                            <p class="text-lg line-through opacity-75 mono">PRIX NORMAL: 197€</p>
+                            <p class="text-2xl font-black text-yellow-400 mono">EARLY BIRD</p>
+                        </div>
+                    </div>
+                    
+                    <div class="brutal-border bg-yellow-400 text-black p-4 mb-6 transform rotate-1">
+                        <p class="font-black mono">⏰ EARLY BIRD SE TERMINE DANS:</p>
+                        <div id="countdown" class="text-3xl font-black mono">2J 14H 32M</div>
+                    </div>
+
+                    <p class="text-xl font-bold mb-8 mono">
+                        MOINS CHER QU'UNE JOURNÉE DE FREELANCE<br>
+                        PERDUE À CAUSE D'UN PROJET IA DISPARU 🤷‍♂️
+                    </p>
+
+                    <button class="bg-yellow-400 text-black font-black text-xl px-8 py-4 brutal-border brutal-shadow-yellow w-full mb-6 shake mono hover:bg-white">
+                        🚀 JE VEUX SAUVER MES PROJETS IA MAINTENANT !
+                    </button>
+
+                    <div class="flex justify-center space-x-8 font-bold mono">
+                        <span>✅ ACCÈS IMMÉDIAT</span>
+                        <span>✅ 30J REMBOURSÉ</span>
+                        <span>✅ UPDATES À VIE</span>
+                    </div>
+                </div>
+
+                <div class="brutal-border bg-white text-black p-6 transform rotate-1">
+                    <p class="text-lg font-bold mono">
+                        👆 CETTE FORMATION VA TE FAIRE ÉCONOMISER<br>
+                        DES HEURES DE FRUSTRATION ET TE DONNER<br>
+                        LA TRANQUILLITÉ QUE TES PROJETS IA SONT EN SÉCURITÉ
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-5xl font-black text-center mb-12">
+                    <span class="brutal-border bg-black text-white p-4 inline-block transform rotate-2">
+                        QUESTIONS DE
+                    </span><br>
+                    <span class="brutal-border bg-purple-500 text-white p-4 inline-block mt-4 transform -rotate-1">
+                        VIBE CODERS
+                    </span>
+                </h2>
+                
+                <div class="space-y-8">
+                    <div class="brutal-border bg-yellow-400 text-black p-6 transform rotate-1 brutal-shadow">
+                        <h3 class="font-black text-lg mb-3 mono">🤔 "JE NE REGARDE JAMAIS LE CODE, POURQUOI GIT ?"</h3>
+                        <p class="font-bold">C'est EXACTEMENT pour ça ! Git c'est pas pour LIRE le code, c'est pour le SAUVEGARDER automatiquement.</p>
+                    </div>
+                    
+                    <div class="brutal-border bg-red-500 text-white p-6 transform -rotate-2 brutal-shadow">
+                        <h3 class="font-black text-lg mb-3 mono">😰 "C'EST COMPLIQUÉ GIT, J'AI PEUR"</h3>
+                        <p class="font-bold">On va apprendre QUE les commandes essentielles. Pas de théorie, que du PRATIQUE. 5 commandes magiques !</p>
+                    </div>
+                    
+                    <div class="brutal-border bg-green-500 text-white p-6 transform rotate-1 brutal-shadow">
+                        <h3 class="font-black text-lg mb-3 mono">💰 "C'EST PAS CHER POUR APPRENDRE GIT ?"</h3>
+                        <p class="font-bold">Combien tu as PERDU en temps sur des projets disparus ? C'est 30€ de moins qu'un dépannage informatique !</p>
+                    </div>
+                    
+                    <div class="brutal-border bg-blue-500 text-white p-6 transform -rotate-1 brutal-shadow">
+                        <h3 class="font-black text-lg mb-3 mono">⏰ "J'AI PAS LE TEMPS D'APPRENDRE"</h3>
+                        <p class="font-bold">2H pour installer et configurer. Après c'est AUTOMATIQUE À VIE. Tu vas GAGNER du temps !</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final CTA -->
+    <div class="py-16 bg-black text-white relative overflow-hidden">
+        <div class="bg-noise absolute inset-0 opacity-30"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="brutal-border-thick bg-red-500 text-white p-8 mb-8 transform rotate-2">
+                    <h2 class="text-4xl font-black mono leading-tight">
+                        ARRÊTE DE JOUER<br>
+                        À LA ROULETTE RUSSE<br>
+                        AVEC TES PROJETS IA 🎰
+                    </h2>
+                </div>
+                
+                <div class="brutal-border bg-yellow-400 text-black p-6 mb-8 transform -rotate-1">
+                    <p class="text-xl font-bold mono">
+                        CHAQUE JOUR SANS GIT = RISQUE DE TOUT PERDRE<br>
+                        TES PROJETS MÉRITENT MIEUX QUE ÇA
+                    </p>
+                </div>
+                
+                <button class="bg-yellow-400 text-black font-black text-2xl px-12 py-6 brutal-border-thick brutal-shadow-yellow transform -rotate-2 hover:rotate-0 transition-transform shake mono">
+                    🔒 JE SÉCURISE MES PROJETS MAINTENANT !
+                </button>
+                
+                <div class="brutal-border bg-white text-black p-4 mt-8 transform rotate-1">
+                    <p class="font-bold mono">
+                        FORMATION CRÉÉE PAR ALEXIS<br>
+                        CRÉATEUR DE CONTENU IA ET FORMATEUR DE 10,000+ VIBE CODERS
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple countdown timer
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const deadline = now + (2 * 24 * 60 * 60 * 1000) + (14 * 60 * 60 * 1000) + (32 * 60 * 1000);
+            const timeLeft = deadline - now;
+            
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            
+            document.getElementById('countdown').innerHTML = `${days}J ${hours}H ${minutes}M`;
+        }
+        
+        updateCountdown();
+        setInterval(updateCountdown, 60000);
+
+        // Add click tracking for buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', () => {
+                console.log('CTA clicked:', button.textContent.trim());
+            });
+        });
+    </script>
+</body>
+</html>
