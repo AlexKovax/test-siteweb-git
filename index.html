@@ -5,55 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Git pour Vibe Coders | Arrête de perdre tes projets IA !</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Space+Grotesk:wght@400;700;900&display=swap');
-        
-        * { font-family: 'Space Grotesk', sans-serif; }
-        .mono { font-family: 'JetBrains Mono', monospace; }
-        
-        .brutal-shadow { box-shadow: 8px 8px 0px #000; }
-        .brutal-shadow-sm { box-shadow: 4px 4px 0px #000; }
-        .brutal-shadow-lg { box-shadow: 12px 12px 0px #000; }
-        .brutal-shadow-red { box-shadow: 8px 8px 0px #dc2626; }
-        .brutal-shadow-yellow { box-shadow: 8px 8px 0px #eab308; }
-        .brutal-shadow-green { box-shadow: 8px 8px 0px #16a34a; }
-        
-        .brutal-border { border: 4px solid #000; }
-        .brutal-border-thick { border: 6px solid #000; }
-        
-        .glitch {
-            position: relative;
-            animation: glitch 2s infinite;
-        }
-        
-        @keyframes glitch {
-            0%, 100% { transform: translate(0); }
-            20% { transform: translate(-2px, 2px); }
-            40% { transform: translate(-2px, -2px); }
-            60% { transform: translate(2px, 2px); }
-            80% { transform: translate(2px, -2px); }
-        }
-        
-        .shake:hover {
-            animation: shake 0.5s;
-        }
-        
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-5px); }
-            75% { transform: translateX(5px); }
-        }
-        
-        .rotate-3d {
-            transform: rotateX(5deg) rotateY(-5deg);
-        }
-        
-        .bg-noise {
-            background-image: 
-                radial-gradient(circle at 1px 1px, rgba(255,255,255,.15) 1px, transparent 0);
-            background-size: 20px 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-white text-black">
     <!-- Hero Section -->
@@ -377,29 +329,6 @@
         </div>
     </div>
 
-    <script>
-        // Simple countdown timer
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const deadline = now + (2 * 24 * 60 * 60 * 1000) + (14 * 60 * 60 * 1000) + (32 * 60 * 1000);
-            const timeLeft = deadline - now;
-            
-            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-            
-            document.getElementById('countdown').innerHTML = `${days}J ${hours}H ${minutes}M`;
-        }
-        
-        updateCountdown();
-        setInterval(updateCountdown, 60000);
-
-        // Add click tracking for buttons
-        document.querySelectorAll('button').forEach(button => {
-            button.addEventListener('click', () => {
-                console.log('CTA clicked:', button.textContent.trim());
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
