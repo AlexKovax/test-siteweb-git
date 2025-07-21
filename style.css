@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Space+Grotesk:wght@400;700;900&display=swap');
+
+* { font-family: 'Space Grotesk', sans-serif; }
+.mono { font-family: 'JetBrains Mono', monospace; }
+
+.brutal-shadow { box-shadow: 8px 8px 0px #000; }
+.brutal-shadow-sm { box-shadow: 4px 4px 0px #000; }
+.brutal-shadow-lg { box-shadow: 12px 12px 0px #000; }
+.brutal-shadow-red { box-shadow: 8px 8px 0px #dc2626; }
+.brutal-shadow-yellow { box-shadow: 8px 8px 0px #eab308; }
+.brutal-shadow-green { box-shadow: 8px 8px 0px #16a34a; }
+
+.brutal-border { border: 4px solid #000; }
+.brutal-border-thick { border: 6px solid #000; }
+
+.glitch {
+    position: relative;
+    animation: glitch 2s infinite;
+}
+
+@keyframes glitch {
+    0%, 100% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+}
+
+.shake:hover {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.rotate-3d {
+    transform: rotateX(5deg) rotateY(-5deg);
+}
+
+.bg-noise {
+    background-image:
+        radial-gradient(circle at 1px 1px, rgba(255,255,255,.15) 1px, transparent 0);
+    background-size: 20px 20px;
+}
